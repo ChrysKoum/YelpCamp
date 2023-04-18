@@ -12,6 +12,9 @@
 </head>
 
 <body class="d-flex text-center text-white bg-dark">
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
     <div id="content" class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="mb-auto">
             <div>
@@ -48,6 +51,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
         integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
         crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(() => {
+                document.getElementById("preloader").style.display = "none";
+                document.querySelector(".content").style.display = "block";
+            }, 3000); // Set a delay (in milliseconds) before the preloader disappears
+        });
+    </script>
 
 </body>
 
